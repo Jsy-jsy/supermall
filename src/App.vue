@@ -1,15 +1,17 @@
 <template>
   <div id="app">
+    <keep-alive exclude="Detail">
+      <router-view/>
+    </keep-alive>
     <main-tab-bar></main-tab-bar>
-    <router-view></router-view>
   </div>
 </template>
 
-<script>
+<script scoped>
 import MainTabBar from '../src/components/content/mainTabbar/MainTabBar.vue'
 
 export default {
-  name: 'App',
+  name: 'app',
   components:{
     MainTabBar
   }
